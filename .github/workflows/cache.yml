@@ -23,5 +23,4 @@ jobs:
         run: echo "cached data" > .dummy-cache/data.txt
 
       - name: prime-cache-b0399fa
-        id: prime-cache-b0399fa
         run: echo "Cache result: ${{ steps.cache-step.outputs.cache-hit }}"
