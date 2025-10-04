@@ -20,7 +20,9 @@ jobs:
           key: cache-b0399fa
 
       - name: Create dummy file
-        run: echo "cached data" > .dummy-cache/data.txt
+        run: |
+          mkdir -p .dummy-cache
+          echo "cached data" > .dummy-cache/data.txt
 
       - name: prime-cache-b0399fa
         run: echo "Cache hit? ${{ steps.cache-deps.outputs.cache-hit }}"
